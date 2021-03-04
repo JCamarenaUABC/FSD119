@@ -1,0 +1,50 @@
+﻿@model CrudDoctor.TB_USERS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TB_USERS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.USERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERPASSWORD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERPASSWORD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BORNDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BORNDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USEREMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USEREMAIL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_USER }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
