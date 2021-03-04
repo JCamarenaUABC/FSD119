@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="~/assets/css/please-wait.css" rel="stylesheet" />
+    <script src="~/assets/js/please-wait.min.js"></script>
+    <script src="~/assets/js/modernizr.js"></script>
+    <script src="~/assets/js/jquery.js"></script>
+    <!--[if lt IE 9]>
+    <script src="~/assets/js/html5shiv.min.js"></script>
+    <script src="~/assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
+<!-- the fixed layout is not compatible with sidebar-mini -->
+<body class="hold-transition skin-blue fixed sidebar-mini">
+    <script type="text/javascript">
+        /*function Splash() {
+            var splash = window.pleaseWait({
+                logo: "/assets/img/logo.jpg",
+                backgroundColor: '#3c8dbc',
+                loadingHtml: "<h1 class='loading-message'>Template by Erikson</h1>" +
+                '<div class="sk-folding-cube"><div class="sk-cube1 sk-cube" ></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
+            });
+
+            return splash;
+        }
+
+        waiter = Splash();
+        $(document)
+            .ready(function () {
+                setTimeout(function () {
+                    waiter.finish();
+                }, 2000);
+            });*/
+    </script>
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <!--a href="#" class="logo">
+                <span class="logo-mini"><b>A</b>LTE</span>
+                <span class="logo-lg"><b>Admin</b>LTE</span>
+            </a-->
+
+            <a href="#" class="logo">
+                <span class="logo-mini brand-text font-weight-light"><img src="assets/img/DoctorFinderLog.png" width="38px" height="38px" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8"></span>
+                <span class="logo-lg brand-text font-weight-light"><img src="assets/img/DoctorFinderLog.png" width="38px" height="38px" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> Doctor finder</span>
+            </a>
+            
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        @Html.Partial("Profile")
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- =============================================== -->
+        <aside class="main-sidebar">
+            @Html.Partial("Menus")
+        </aside>
+        <!-- =============================================== -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    @ViewBag.Title
+                    <small>@ViewBag.Subtitle</small>
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                @RenderBody()
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+            </div>
+            <strong></strong>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/assets/css/skin-blue.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/iCheck/flat/blue.css" rel="stylesheet" />
+
+
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
+    <!---- -->
+    <link rel="stylesheet" href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="~/assets/plugins/daterangepicker/daterangepicker.css">
+
+    <!---- -->
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/jquery.validate.min.js"></script>
+    <script src="~/assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="~/assets/plugins/fastclick/fastclick.min.js"></script>
+    <script src="~/assets/js/app.min.js"></script>
+    <script src="~/assets/js/demo.js"></script>
+    <script src="~/assets/js/AdminLTE.js"></script>
+    <!--script src="~/assets/plugins/iCheck/icheck.min.js"></script-->
+
+
+    <!-- DATA TABLE -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/jszip/jszip.min.js"></script>
+    <script src="~/assets/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/assets/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- date-range-picker -->
+    <script src="~/assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <script>
+        /*$(document).ready(function () {
+            $('input[type="radio"]')
+                .iCheck({
+                    checkboxClass: 'icheckbox_flat-blue',
+                    radioClass: 'iradio_flat-blue',
+                    increaseArea: '20%' // optional
+                });
+
+            $('input[type="checkbox"]:not(.bootstrap-switch)')
+                .iCheck({
+                    checkboxClass: 'icheckbox_flat-blue',
+                    radioClass: 'iradio_flat-blue',
+                    increaseArea: '20%' // optional
+                });
+        })*/
+    </script>
+    @RenderSection("scripts", required: false)
+    @{
+        if (ViewBag.Erro != null)
+        {
+            foreach (var m in (List<string>)ViewBag.Erro)
+            {
+                <script>
+                    MsgErro('@m');
+                </script>
+            }
+        }
+
+        if (ViewBag.Ok != null)
+        {
+            foreach (var m in (List<string>)ViewBag.Ok)
+            {
+                <script>
+                    MsgOk('@m');
+                </script>
+            }
+        }
+
+        if (ViewBag.Info != null)
+        {
+            foreach (var m in (List<string>)ViewBag.Info)
+            {
+                <script>
+                    MsgInfo('@m');
+                </script>
+            }
+        }
+
+        if (ViewBag.Alerta != null)
+        {
+            foreach (var m in (List<string>)ViewBag.Alerta)
+            {
+                <script>
+                    MsgAlerta('@m');
+                </script>
+            }
+        }
+
+    }
+</body>
+</html>

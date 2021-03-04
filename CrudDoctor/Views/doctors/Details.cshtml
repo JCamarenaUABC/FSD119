@@ -1,0 +1,50 @@
+﻿@model CrudDoctor.TB_DOCTOR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TB_DOCTOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DOCTORNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOCTORNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BORNDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BORNDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOCATIONDOCTOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOCATIONDOCTOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPTION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_DOCTOR }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

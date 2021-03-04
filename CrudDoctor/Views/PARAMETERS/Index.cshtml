@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CrudDoctor.TB_PARAMETERS>
+
+@{
+    ViewBag.Title = "Catalog Parameters";
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCR_PARAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VAL1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VAL2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VAL3)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        <a href="@(Url.Action("Edit", new { id = item.ID_PARAM }))">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a href="@(Url.Action("Delete", new { id = item.ID_PARAM }))">
+            <i class="fas fa-trash-alt"></i>
+        </a>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DESCR_PARAM)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VAL1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VAL2)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VAL3)
+    </td>
+</tr>
+}
+
+</table>
